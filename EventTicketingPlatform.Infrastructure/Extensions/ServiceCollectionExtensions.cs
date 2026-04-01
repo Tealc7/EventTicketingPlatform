@@ -12,12 +12,14 @@ namespace EventTicketingPlatform.Infrastructure.Extensions
             this IServiceCollection services,
             IConfiguration configuration)
         {
+            // DbContext
             services.AddDbContext<AppDbContext>(options =>
-                        options.UseNpgsql(
-                            configuration.GetConnectionString("DefaultConnection"),
-                            b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)
-                        )
-                    );
+                options.UseNpgsql(
+                    configuration.GetConnectionString("DefaultConnection"),
+                    b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)
+                )
+            );
+
             return services;
         }
     }
