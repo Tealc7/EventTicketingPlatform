@@ -1,6 +1,4 @@
-﻿
-using BCrypt.Net;
-using EventTicketingPlatform.Application.DTOs.Auth;
+﻿using EventTicketingPlatform.Application.DTOs.Auth;
 using EventTicketingPlatform.Application.Interfaces;
 using EventTicketingPlatform.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +41,7 @@ namespace EventTicketingPlatform.Application.Services
                 };
             }
 
-            if (!BCrypt.Verify(request.Password, user.PasswordHash))
+            if (!BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
             {
                 return new AuthResponseDto
                 {
@@ -134,7 +132,7 @@ namespace EventTicketingPlatform.Application.Services
                 Email = request.Email,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                PasswordHash = BCrypt.HashPassword(request.Password),
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
                 RoleId = customerRole.Id,
                 IsActive = true
             };

@@ -15,7 +15,6 @@ public static class ServiceCollectionExtensions
 
         // ===== AUTH SERVICES =====
         services.AddScoped<IJwtTokenService, JwtTokenService>();
-        services.AddScoped<IAuthService, AuthService>();
 
         return services;
     }

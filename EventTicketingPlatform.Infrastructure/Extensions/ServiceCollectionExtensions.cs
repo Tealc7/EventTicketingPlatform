@@ -1,4 +1,6 @@
 ﻿
+using EventTicketingPlatform.Application.Interfaces;
+using EventTicketingPlatform.Application.Services;
 using EventTicketingPlatform.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +21,7 @@ namespace EventTicketingPlatform.Infrastructure.Extensions
                     b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)
                 )
             );
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }
