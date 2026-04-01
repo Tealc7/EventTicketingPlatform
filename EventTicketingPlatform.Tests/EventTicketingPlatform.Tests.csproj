@@ -15,10 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventTicketingPlatform.Api\EventTicketingPlatform.Api.csproj" />
     <ProjectReference Include="..\EventTicketingPlatform.Application\EventTicketingPlatform.Application.csproj" />
     <ProjectReference Include="..\EventTicketingPlatform.Domain\EventTicketingPlatform.Domain.csproj" />
     <ProjectReference Include="..\EventTicketingPlatform.Infrastructure\EventTicketingPlatform.Infrastructure.csproj" />
-    <ProjectReference Include="..\EventTicketingPlatform\EventTicketingPlatform.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

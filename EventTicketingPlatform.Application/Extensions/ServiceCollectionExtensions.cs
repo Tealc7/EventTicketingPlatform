@@ -1,6 +1,5 @@
 ﻿using EventTicketingPlatform.Application.Interfaces;
 using EventTicketingPlatform.Application.Services;
-using EventTicketingPlatform.Application.Services.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -11,7 +10,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddApplication(
         this IServiceCollection services)
     {
-        // AutoMapper - iba Application assembly
+        // AutoMapper
         services.AddAutoMapper(cfg => { }, Assembly.GetExecutingAssembly());
 
         // ===== AUTH SERVICES =====

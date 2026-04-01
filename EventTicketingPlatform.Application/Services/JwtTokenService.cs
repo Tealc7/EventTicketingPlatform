@@ -6,7 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace EventTicketingPlatform.Application.Services.Implementations;
+namespace EventTicketingPlatform.Application.Services;
 
 public class JwtTokenService : IJwtTokenService
 {

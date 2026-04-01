@@ -3,8 +3,8 @@ using BCrypt.Net;
 using EventTicketingPlatform.Application.DTOs.Auth;
 using EventTicketingPlatform.Application.Interfaces;
 using EventTicketingPlatform.Domain.Entities;
-using EventTicketingPlatform.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using EventTicketingPlatform.Infrastructure.Persistence;
 
 namespace EventTicketingPlatform.Application.Services
 {
